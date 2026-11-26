@@ -1,0 +1,126 @@
+/* STATARA — Portal Statistik Republik Aruna. System font stack, tanpa font eksternal. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+  background: #f3f5f4;
+}
+a { color: #0f766e; }
+h1 { font-size: 24px; margin: 0 0 4px; color: #0b3d3a; }
+h2 { font-size: 16px; margin: 0 0 8px; color: #0b3d3a; }
+h2 small { font-weight: 400; color: #6b7280; font-size: 12px; }
+.lede { margin: 0 0 14px; color: #4b5563; max-width: 72ch; }
+
+/* Header + nav */
+.topbar { background: #0b3d3a; color: #fff; }
+.topbar-inner { max-width: 1180px; margin: 0 auto; padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.brand { font-size: 20px; font-weight: 800; letter-spacing: .04em; color: #fff; text-decoration: none; }
+.brand span { color: #f2b234; }
+.topbar nav { display: flex; flex-wrap: wrap; gap: 2px; }
+.topbar nav a { color: #d1fae5; text-decoration: none; padding: 5px 9px; border-radius: 6px; font-size: 13.5px; }
+.topbar nav a:hover { background: #115e59; color: #fff; }
+.topbar nav a.active { background: #f2b234; color: #0b3d3a; font-weight: 700; }
+.search { margin-left: auto; position: relative; }
+.search input {
+  width: 250px; padding: 6px 10px; border: 1px solid #5b8a86; border-radius: 6px;
+  background: #0f4c49; color: #fff; font: inherit; font-size: 13.5px;
+}
+.search input::placeholder { color: #9fc3bf; }
+.search-res {
+  position: absolute; right: 0; top: 34px; width: 320px; z-index: 20;
+  background: #fff; color: #1f2937; border: 1px solid #d1d5db; border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18); overflow: hidden;
+}
+.search-res a { display: block; padding: 8px 12px; text-decoration: none; border-bottom: 1px solid #f3f4f6; }
+.search-res a:hover { background: #f0fdfa; }
+.search-res a b { display: block; font-size: 13.5px; color: #0b3d3a; }
+.search-res a span { font-size: 12px; color: #6b7280; }
+.search-res p { padding: 10px 12px; margin: 0; font-size: 13px; }
+
+/* Layout */
+main { max-width: 1180px; margin: 0 auto; padding: 16px 16px 32px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 12px; }
+.toolbar-note { font-size: 12.5px; color: #6b7280; }
+.ctl { font-size: 13.5px; font-weight: 600; color: #374151; }
+.ctl select { font: inherit; padding: 5px 8px; border: 1px solid #d1d5db; border-radius: 6px; background: #fff; }
+
+/* KPI cards */
+.kpi-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-bottom: 12px; }
+.kpi { background: #fff; border: 1px solid #e5e7eb; border-top: 4px solid #0f766e; border-radius: 8px; padding: 10px 12px; }
+.kpi-label { display: block; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; color: #6b7280; }
+.kpi-value { display: block; font-size: 24px; font-weight: 800; color: #0b3d3a; margin: 2px 0; }
+.kpi-src { display: block; font-size: 11px; color: #6b7280; }
+
+/* Cards + charts */
+.chart-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+.chart-grid.two { grid-template-columns: 1fr 1fr; }
+.card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 14px 16px; margin-bottom: 12px; }
+.chart-grid .card { margin-bottom: 0; }
+.src { font-size: 11.5px; color: #6b7280; margin: 6px 0 0; }
+.fine { font-size: 12px; color: #6b7280; }
+.card-tools { margin-bottom: 4px; }
+.toggle { display: inline-flex; border: 1px solid #d1d5db; border-radius: 6px; overflow: hidden; }
+.toggle button { border: 0; background: #fff; padding: 4px 12px; font: inherit; font-size: 12.5px; cursor: pointer; color: #374151; }
+.toggle button.on { background: #0f766e; color: #fff; font-weight: 700; }
+
+/* News + kv lists */
+.news { list-style: none; margin: 0; padding: 0; }
+.news li { border-bottom: 1px solid #f3f4f6; }
+.news li:last-child { border-bottom: 0; }
+.news a { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; padding: 8px 0; text-decoration: none; color: inherit; }
+.news a:hover b { text-decoration: underline; }
+.news .tag { background: #fef3c7; color: #92400e; font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 20px; }
+.news time { margin-left: auto; font-size: 12px; color: #6b7280; }
+.kv { list-style: none; margin: 0; padding: 0; }
+.kv li { padding: 8px 0; border-bottom: 1px solid #f3f4f6; }
+.kv li:last-child { border-bottom: 0; }
+.kv b { display: block; }
+.kv span { font-size: 13px; color: #6b7280; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid #f3f4f6; }
+thead th { background: #f9fafb; color: #374151; font-size: 12.5px; white-space: nowrap; }
+th[data-action="sort"] { cursor: pointer; }
+th[data-action="sort"]:hover { color: #0f766e; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: #f0fdfa; }
+
+/* Donut + legend */
+.donut-wrap { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.legend { display: grid; gap: 5px; font-size: 13px; }
+.legend .lg i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 7px; }
+
+/* Map */
+.map-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 12px; align-items: start; }
+.map-layout .card { margin-bottom: 12px; }
+.map-tile { cursor: pointer; }
+.map-tile:hover rect { stroke: #f2b234; stroke-width: 3; }
+.map-tile.sel rect { stroke: #d97706; }
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 0; }
+.stats div { background: #f9fafb; border-radius: 6px; padding: 8px 10px; }
+.stats dt { font-size: 11.5px; color: #6b7280; text-transform: uppercase; letter-spacing: .03em; }
+.stats dd { margin: 2px 0 0; font-size: 16px; font-weight: 700; color: #0b3d3a; }
+
+/* Footer */
+footer { border-top: 1px solid #e5e7eb; padding: 14px 16px 24px; text-align: center; font-size: 12.5px; color: #6b7280; background: #fff; }
+
+/* Phone */
+@media (max-width: 900px) {
+  .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+  .chart-grid, .chart-grid.two, .map-layout { grid-template-columns: 1fr; }
+  .search { margin-left: 0; width: 100%; }
+  .search input { width: 100%; }
+  .search-res { width: 100%; }
+}
+@media (max-width: 520px) {
+  body { font-size: 14px; }
+  h1 { font-size: 20px; }
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .kpi-value { font-size: 20px; }
+  main { padding: 12px 10px 24px; }
+  .news time { margin-left: 0; }
+  .stats { grid-template-columns: 1fr 1fr; }
+}
